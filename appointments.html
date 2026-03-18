@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments - MGE South Bay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="hours">Mon - Fri: 8:00 AM - 5:30 PM | Sat: 8:00 AM - 1:00 PM</div>
+      <div>Call Us: <a href="tel:+13101234567">(310) 123-4567</a></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">M</div>
+        <h1>MGE South Bay<span>Premier Auto Service &amp; Repair</span></h1>
+      </a>
+      <nav id="nav">
+        <button class="nav-close" id="navClose">&times;</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tires.html">Tires</a></li>
+          <li><a href="mission.html">Our Mission</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="warranty.html">Warranty</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="directions.html">Directions</a></li>
+          <li><a href="appointments.html" class="btn-appointment active">Book Now</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h2>Schedule an Appointment</h2>
+      <p>Request your preferred date and time — we'll confirm your appointment</p>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Appointments</div>
+    </div>
+  </section>
+
+  <!-- Appointment Form -->
+  <section class="section">
+    <div class="container">
+      <div class="appointment-wrapper">
+        <div>
+          <div class="section-title" style="text-align:left; margin-bottom:30px;">
+            <h2 style="font-size:1.8rem;">Request an Appointment</h2>
+            <p>Fill out the form below and we'll contact you to confirm your appointment details. The date and time you request may not be available — we will reach out to confirm.</p>
+          </div>
+          <form id="appointmentForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vehicleYear">Vehicle Year</label>
+                <input type="text" id="vehicleYear" name="vehicleYear">
+              </div>
+              <div class="form-group">
+                <label for="vehicleMake">Vehicle Make</label>
+                <input type="text" id="vehicleMake" name="vehicleMake">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vehicleModel">Vehicle Model</label>
+                <input type="text" id="vehicleModel" name="vehicleModel">
+              </div>
+              <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                  <option value="">Select a service...</option>
+                  <option value="oil">Oil &amp; Filter Change</option>
+                  <option value="brakes">Brake Service</option>
+                  <option value="ac">A/C Service</option>
+                  <option value="engine">Engine Repair</option>
+                  <option value="transmission">Transmission Service</option>
+                  <option value="alignment">Wheel Alignment</option>
+                  <option value="tires">Tire Service</option>
+                  <option value="diagnostics">Diagnostics</option>
+                  <option value="emissions">Emissions/Smog</option>
+                  <option value="suspension">Suspension</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prefDate">Preferred Date</label>
+                <input type="date" id="prefDate" name="prefDate">
+              </div>
+              <div class="form-group">
+                <label for="prefTime">Preferred Time</label>
+                <select id="prefTime" name="prefTime">
+                  <option value="">Select a time...</option>
+                  <option value="8:00 AM">8:00 AM</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="comments">Additional Comments</label>
+              <textarea id="comments" name="comments" placeholder="Describe the issue or any additional information..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit Appointment Request</button>
+          </form>
+        </div>
+
+        <div class="appointment-info">
+          <h3>Contact Information</h3>
+          <p>Have questions or prefer to call? Reach out to us directly and we'll be happy to help.</p>
+          <div class="info-item">
+            <div class="icon">&#128222;</div>
+            <div class="details">
+              <h4>Phone</h4>
+              <p>(310) 123-4567</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">&#128205;</div>
+            <div class="details">
+              <h4>Location</h4>
+              <p>South Bay, CA</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">&#128339;</div>
+            <div class="details">
+              <h4>Business Hours</h4>
+              <p>Mon - Fri: 8:00 AM - 5:30 PM<br>Sat: 8:00 AM - 1:00 PM<br>Sun: Closed</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">&#128663;</div>
+            <div class="details">
+              <h4>Courtesy Rides</h4>
+              <p>We offer complimentary local courtesy rides while your vehicle is being serviced.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MGE South Bay</h3>
+          <p>Your trusted neighborhood auto repair shop in the South Bay. We provide expert service for all makes and models with a commitment to honesty, quality, and customer satisfaction.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tires.html">Tires</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="warranty.html">Warranty</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="directions.html">Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li>(310) 123-4567</li>
+            <li>South Bay, CA</li>
+            <li>Mon-Fri: 8AM - 5:30PM</li>
+            <li>Sat: 8AM - 1PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 MGE South Bay. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
