@@ -1,6 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <!-- Outer ring -->
-  <circle cx="200" cy="200" r="195" fill="#1b2d4f"/>
   <circle cx="200" cy="200" r="170" fill="#e8813a"/>
 
   <!-- Sky gradient -->

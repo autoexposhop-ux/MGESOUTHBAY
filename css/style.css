@@ -108,11 +108,7 @@ header .container {
 .logo-img {
   width: 60px;
   height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 2px 12px rgba(0, 0, 0, 0.4);
-  background: #1b2d4f;
+  object-fit: contain;
 }
 
 .logo h1 {
@@ -1098,10 +1094,6 @@ footer {
 .footer-logo img {
   width: 55px;
   height: 55px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 2px 12px rgba(0, 0, 0, 0.4);
-  background: #1b2d4f;
 }
 
 .footer-logo span {
