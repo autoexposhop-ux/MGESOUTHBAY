@@ -137,6 +137,10 @@ header .container {
   text-transform: uppercase;
 }
 
+.nav-close {
+  display: none;
+}
+
 /* Nav — center/right */
 nav ul {
   display: flex;
