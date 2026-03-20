@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MGE California">
+  <meta property="og:title" content="Directions &amp; Contact | MGE California - Hawthorne, CA">
+  <meta property="og:description" content="Get directions to MGE California at 13900 Inglewood Ave, Hawthorne, CA 90250. View our map, hours, phone number, and contact information.">
+  <meta property="og:url" content="https://mgesouthbay.com/directions.html">
+  <meta property="og:image" content="https://mgesouthbay.com/images/our_promise_photo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Directions &amp; Contact | MGE California - Hawthorne, CA">
+  <meta name="twitter:description" content="Get directions to MGE California at 13900 Inglewood Ave, Hawthorne, CA 90250. View our map, hours, phone number, and contact information.">
+  <meta name="twitter:image" content="https://mgesouthbay.com/images/our_promise_photo.jpg">
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -53,7 +65,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="hours">Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM</div>
-      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a></div>
+      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link">Text Us</a></div>
     </div>
   </div>
 
@@ -61,11 +73,14 @@
   <header>
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        </picture>
         <h1>MGE California<br><span>Premier Auto Service &amp; Repair</span></h1>
       </a>
       <nav id="nav">
-        <button class="nav-close" id="navClose" style="display:none">&times;</button>
+        <button class="nav-close" id="navClose" aria-label="Close navigation menu" style="display:none">&times;</button>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -78,7 +93,7 @@
           <li><a href="appointments.html" class="btn-appointment">Book Now</a></li>
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" aria-label="Open navigation menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -101,6 +116,7 @@
         <div class="map-placeholder">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.5!2d-118.3517!3d33.9086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b4b6e9e9e9e9%3A0x1!2s13900+Inglewood+Ave%2C+Hawthorne%2C+CA+90250!5e0!3m2!1sen!2sus!4v1700000000000"
+            title="MGE California location on Google Maps"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
@@ -122,7 +138,7 @@
             <div class="icon">&#128222;</div>
             <div>
               <h4>Phone</h4>
-              <p><a href="tel:+13105468999" style="color: var(--secondary);">(310) 546-8999</a></p>
+              <p><a href="tel:+13105468999" style="color: var(--secondary);">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link" style="color: var(--secondary);">Text Us</a></p>
             </div>
           </div>
 
@@ -218,7 +234,10 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="images/logo.png" alt="MGE California">
+            <picture>
+              <source srcset="images/logo.webp" type="image/webp">
+              <img src="images/logo.png" alt="MGE California Logo">
+            </picture>
             <span>MGE California</span>
           </div>
           <p>Your trusted neighborhood auto repair shop in the South Bay. We provide expert service for all makes and models with a commitment to honesty, quality, and customer satisfaction.</p>
@@ -245,7 +264,7 @@
         <div class="footer-col">
           <h3>Contact</h3>
           <ul>
-            <li><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a></li>
+            <li><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link" style="color: inherit;">Text Us</a></li>
             <li>SameDayAutoServices@gmail.com</li>
             <li>13900 Inglewood Ave, Hawthorne, CA 90250</li>
             <li>Mon-Fri: 8AM - 6PM</li>
@@ -262,6 +281,6 @@
 
   <script src="js/main.js"></script>
 
-  <a href="appointments.html" class="sticky-book-now">Book Now</a>
+  <a href="appointments.html" class="sticky-book-now" aria-label="Book an appointment">Book Now</a>
 </body>
 </html>

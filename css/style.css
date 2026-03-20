@@ -1423,4 +1423,41 @@ footer {
   .sticky-book-now {
     display: none;
   }
+
+  .sms-link {
+    display: none;
+  }
+}
+
+/* ===== SMS LINK (mobile only) ===== */
+.sms-link {
+  margin-left: 8px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.top-bar .sms-link {
+  color: var(--white);
+}
+
+.top-bar .sms-link:hover {
+  color: var(--secondary);
+}
+
+/* ===== FORM VALIDATION ERRORS ===== */
+.form-error {
+  color: #c0392b;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: none;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+  border-color: #c0392b;
+}
+
+.form-group.has-error .form-error {
+  display: block;
 }
