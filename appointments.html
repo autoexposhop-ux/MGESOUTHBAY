@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MGE California">
+  <meta property="og:title" content="Book an Appointment | MGE California - Schedule Online">
+  <meta property="og:description" content="Schedule your auto repair appointment online at MGE California. We confirm within one business hour. Convenient service in Hawthorne, South Bay, CA.">
+  <meta property="og:url" content="https://mgesouthbay.com/appointments.html">
+  <meta property="og:image" content="https://mgesouthbay.com/images/our_promise_photo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book an Appointment | MGE California - Schedule Online">
+  <meta name="twitter:description" content="Schedule your auto repair appointment online at MGE California. We confirm within one business hour. Convenient service in Hawthorne, South Bay, CA.">
+  <meta name="twitter:image" content="https://mgesouthbay.com/images/our_promise_photo.jpg">
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -53,7 +65,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="hours">Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM</div>
-      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a></div>
+      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link">Text Us</a></div>
     </div>
   </div>
 
@@ -61,11 +73,14 @@
   <header>
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        </picture>
         <h1>MGE California<br><span>Premier Auto Service &amp; Repair</span></h1>
       </a>
       <nav id="nav">
-        <button class="nav-close" id="navClose" style="display:none">&times;</button>
+        <button class="nav-close" id="navClose" aria-label="Close navigation menu" style="display:none">&times;</button>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -78,7 +93,7 @@
           <li><a href="appointments.html" class="btn-appointment active">Book Now</a></li>
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" aria-label="Open navigation menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -103,41 +118,48 @@
             <h2 style="font-size:1.8rem;">Request an Appointment</h2>
             <p>Fill out the form below and we'll contact you to confirm your appointment details. The date and time you request may not be available — we will reach out to confirm.</p>
           </div>
-          <form id="appointment-form">
+          <form id="appointment-form" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name *</label>
                 <input type="text" id="firstName" name="firstName" required>
+                <span class="form-error" id="firstName-error">First name is required (minimum 2 characters).</span>
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name *</label>
                 <input type="text" id="lastName" name="lastName" required>
+                <span class="form-error" id="lastName-error">Last name is required (minimum 2 characters).</span>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email *</label>
                 <input type="email" id="email" name="email" required>
+                <span class="form-error" id="email-error">Please enter a valid email address.</span>
               </div>
               <div class="form-group">
                 <label for="phone">Phone *</label>
                 <input type="tel" id="phone" name="phone" required>
+                <span class="form-error" id="phone-error">Please enter a valid US phone number.</span>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="vehicleYear">Vehicle Year</label>
-                <input type="text" id="vehicleYear" name="vehicleYear">
+                <label for="vehicleYear">Vehicle Year *</label>
+                <input type="text" id="vehicleYear" name="vehicleYear" required>
+                <span class="form-error" id="vehicleYear-error">Vehicle year is required.</span>
               </div>
               <div class="form-group">
-                <label for="vehicleMake">Vehicle Make</label>
-                <input type="text" id="vehicleMake" name="vehicleMake">
+                <label for="vehicleMake">Vehicle Make *</label>
+                <input type="text" id="vehicleMake" name="vehicleMake" required>
+                <span class="form-error" id="vehicleMake-error">Vehicle make is required.</span>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="vehicleModel">Vehicle Model</label>
-                <input type="text" id="vehicleModel" name="vehicleModel">
+                <label for="vehicleModel">Vehicle Model *</label>
+                <input type="text" id="vehicleModel" name="vehicleModel" required>
+                <span class="form-error" id="vehicleModel-error">Vehicle model is required.</span>
               </div>
               <div class="form-group">
                 <label for="service">Service Needed *</label>
@@ -158,12 +180,14 @@
                   <option value="Fleet Service">Fleet Service</option>
                   <option value="Other">Other</option>
                 </select>
+                <span class="form-error" id="service-error">Please select a service.</span>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="preferredDate">Preferred Date *</label>
                 <input type="date" id="preferredDate" name="preferredDate" required>
+                <span class="form-error" id="preferredDate-error">Please select a valid future date.</span>
               </div>
               <div class="form-group">
                 <label for="preferredTime">Preferred Time *</label>
@@ -180,6 +204,7 @@
                   <option value="4:00 PM">4:00 PM</option>
                   <option value="5:00 PM">5:00 PM</option>
                 </select>
+                <span class="form-error" id="preferredTime-error">Please select a preferred time.</span>
               </div>
             </div>
             <div class="form-group">
@@ -198,7 +223,7 @@
             <div class="icon">&#128222;</div>
             <div class="details">
               <h4>Phone</h4>
-              <p><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a></p>
+              <p><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link" style="color: inherit;">Text Us</a></p>
             </div>
           </div>
           <div class="info-item">
@@ -233,7 +258,10 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="images/logo.png" alt="MGE California">
+            <picture>
+              <source srcset="images/logo.webp" type="image/webp">
+              <img src="images/logo.png" alt="MGE California Logo">
+            </picture>
             <span>MGE California</span>
           </div>
           <p>Your trusted neighborhood auto repair shop in the South Bay. We provide expert service for all makes and models with a commitment to honesty, quality, and customer satisfaction.</p>
@@ -260,7 +288,7 @@
         <div class="footer-col">
           <h3>Contact</h3>
           <ul>
-            <li><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a></li>
+            <li><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link" style="color: inherit;">Text Us</a></li>
             <li>SameDayAutoServices@gmail.com</li>
             <li>13900 Inglewood Ave, Hawthorne, CA 90250</li>
             <li>Mon-Fri: 8AM - 6PM</li>
@@ -299,13 +327,11 @@
         opt.disabled = false;
         opt.style.display = '';
       });
-      // Sunday — disable all
       if (day === 0) {
         alert('We are closed on Sundays. Please choose another date.');
         this.value = '';
         return;
       }
-      // Saturday — disable 8 AM and 4 PM+ slots
       if (day === 6) {
         options.forEach(opt => {
           const val = opt.value;
@@ -317,6 +343,101 @@
     });
   }
 
+  // --- Inline Validation Helpers ---
+  function setError(fieldName, message) {
+    var group = document.getElementById(fieldName);
+    if (group) group = group.closest('.form-group');
+    if (!group) return;
+    group.classList.add('has-error');
+    var errEl = document.getElementById(fieldName + '-error');
+    if (errEl && message) errEl.textContent = message;
+  }
+
+  function clearError(fieldName) {
+    var group = document.getElementById(fieldName);
+    if (group) group = group.closest('.form-group');
+    if (!group) return;
+    group.classList.remove('has-error');
+  }
+
+  function clearAllErrors() {
+    document.querySelectorAll('.form-group.has-error').forEach(function(g) {
+      g.classList.remove('has-error');
+    });
+  }
+
+  // Clear error on input change
+  document.querySelectorAll('#appointment-form input, #appointment-form select, #appointment-form textarea').forEach(function(el) {
+    el.addEventListener('input', function() { clearError(this.name); });
+    el.addEventListener('change', function() { clearError(this.name); });
+  });
+
+  function validateForm(formData) {
+    var valid = true;
+    clearAllErrors();
+
+    // First Name: required, min 2 chars
+    if (!formData.firstName || formData.firstName.length < 2) {
+      setError('firstName', 'First name is required (minimum 2 characters).');
+      valid = false;
+    }
+    // Last Name: required, min 2 chars
+    if (!formData.lastName || formData.lastName.length < 2) {
+      setError('lastName', 'Last name is required (minimum 2 characters).');
+      valid = false;
+    }
+    // Email: required, valid format
+    if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setError('email', 'Please enter a valid email address.');
+      valid = false;
+    }
+    // Phone: required, valid US format
+    var phoneDigits = (formData.phone || '').replace(/\D/g, '');
+    if (!formData.phone || !/^[\d\s\-().+]+$/.test(formData.phone) || phoneDigits.length < 10 || phoneDigits.length > 11) {
+      setError('phone', 'Please enter a valid US phone number (e.g. (310) 546-8999).');
+      valid = false;
+    }
+    // Vehicle Year
+    if (!formData.vehicleYear) {
+      setError('vehicleYear', 'Vehicle year is required.');
+      valid = false;
+    }
+    // Vehicle Make
+    if (!formData.vehicleMake) {
+      setError('vehicleMake', 'Vehicle make is required.');
+      valid = false;
+    }
+    // Vehicle Model
+    if (!formData.vehicleModel) {
+      setError('vehicleModel', 'Vehicle model is required.');
+      valid = false;
+    }
+    // Service
+    if (!formData.service) {
+      setError('service', 'Please select a service.');
+      valid = false;
+    }
+    // Preferred Date: required, not in the past
+    if (!formData.preferredDate) {
+      setError('preferredDate', 'Please select a preferred date.');
+      valid = false;
+    } else {
+      var today = new Date();
+      today.setHours(0,0,0,0);
+      var selected = new Date(formData.preferredDate + 'T00:00:00');
+      if (selected < today) {
+        setError('preferredDate', 'Date cannot be in the past.');
+        valid = false;
+      }
+    }
+    // Preferred Time
+    if (!formData.preferredTime) {
+      setError('preferredTime', 'Please select a preferred time.');
+      valid = false;
+    }
+    return valid;
+  }
+
   // Form submit handler
   const form = document.getElementById('appointment-form');
   if (!form) return;
@@ -324,23 +445,14 @@
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
+    const submitBtn = form.querySelector('button[type="submit"]');
     if (!submitBtn) return;
 
-    const originalText = submitBtn.textContent || submitBtn.value;
-
-    // Prevent double-submit
-    if (submitBtn.disabled) return;
-    submitBtn.disabled = true;
-    if (submitBtn.tagName === 'BUTTON') {
-      submitBtn.textContent = 'Submitting...';
-    } else {
-      submitBtn.value = 'Submitting...';
-    }
+    const originalText = submitBtn.textContent;
 
     // Collect form data
     const getValue = (name) => {
-      const el = form.querySelector(`[name="${name}"]`);
+      const el = form.querySelector('[name="' + name + '"]');
       return el ? el.value.trim() : '';
     };
 
@@ -356,23 +468,21 @@
       preferredDate: getValue('preferredDate'),
       preferredTime: getValue('preferredTime'),
       comments: getValue('comments'),
-      website: getValue('website') // honeypot
+      website: getValue('website')
     };
 
-    // Client-side validation
-    const required = ['firstName', 'lastName', 'email', 'phone', 'service', 'preferredDate', 'preferredTime'];
-    const missing = required.filter(f => !formData[f]);
-    if (missing.length > 0) {
-      showError('Please fill in all required fields.');
-      resetBtn();
+    // Run inline validation
+    if (!validateForm(formData)) {
+      // Scroll to first error
+      var firstErr = form.querySelector('.form-group.has-error');
+      if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      showError('Please enter a valid email address.');
-      resetBtn();
-      return;
-    }
+    // Prevent double-submit
+    if (submitBtn.disabled) return;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
 
     try {
       const response = await fetch('https://mohammedelokour.app.n8n.cloud/webhook/mge-appointment', {
@@ -401,11 +511,7 @@
 
     function resetBtn() {
       submitBtn.disabled = false;
-      if (submitBtn.tagName === 'BUTTON') {
-        submitBtn.textContent = originalText;
-      } else {
-        submitBtn.value = originalText;
-      }
+      submitBtn.textContent = originalText;
     }
   });
 
@@ -436,18 +542,17 @@
   }
 
   function showError(message) {
-    // Remove existing error
     const existing = document.getElementById('mge-form-error');
     if (existing) existing.remove();
 
     const errorDiv = document.createElement('div');
     errorDiv.id = 'mge-form-error';
     errorDiv.style.cssText = 'background:#fef2f2;color:#b91c1c;padding:12px 18px;border-radius:8px;margin-top:15px;font-size:14px;border:1px solid #fecaca;display:flex;align-items:center;gap:8px;';
-    errorDiv.innerHTML = '<span style="font-size:18px;">⚠️</span> ' + message;
+    errorDiv.innerHTML = '<span style="font-size:18px;">&#9888;</span> ' + message;
 
     const form = document.getElementById('appointment-form');
     if (form) {
-      const btn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
+      const btn = form.querySelector('button[type="submit"]');
       if (btn && btn.parentNode) {
         btn.parentNode.insertBefore(errorDiv, btn.nextSibling);
       } else {
@@ -466,6 +571,6 @@
 })();
   </script>
 
-  <a href="appointments.html" class="sticky-book-now">Book Now</a>
+  <a href="appointments.html" class="sticky-book-now" aria-label="Book an appointment">Book Now</a>
 </body>
 </html>

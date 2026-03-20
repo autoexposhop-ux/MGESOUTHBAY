@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MGE California">
+  <meta property="og:title" content="Privacy Policy | MGE California - Your Data Protection">
+  <meta property="og:description" content="Read the privacy policy for MGE California. Learn how we collect, use, and protect your personal information. CCPA compliant auto repair shop in Hawthorne.">
+  <meta property="og:url" content="https://mgesouthbay.com/privacy.html">
+  <meta property="og:image" content="https://mgesouthbay.com/images/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy | MGE California - Your Data Protection">
+  <meta name="twitter:description" content="Read the privacy policy for MGE California. Learn how we collect, use, and protect your personal information. CCPA compliant auto repair shop in Hawthorne.">
+  <meta name="twitter:image" content="https://mgesouthbay.com/images/logo.png">
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -53,7 +65,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="hours">Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM</div>
-      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a></div>
+      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link">Text Us</a></div>
     </div>
   </div>
 
@@ -61,11 +73,14 @@
   <header>
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        </picture>
         <h1>MGE California<br><span>Premier Auto Service &amp; Repair</span></h1>
       </a>
       <nav id="nav">
-        <button class="nav-close" id="navClose" style="display:none">&times;</button>
+        <button class="nav-close" id="navClose" aria-label="Close navigation menu" style="display:none">&times;</button>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -78,7 +93,7 @@
           <li><a href="appointments.html" class="btn-appointment">Book Now</a></li>
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" aria-label="Open navigation menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
       </div>
     </div>
