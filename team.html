@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MGE California">
+  <meta property="og:title" content="Our Team | MGE California - ASE Certified Technicians">
+  <meta property="og:description" content="Meet the ASE certified and factory-trained technicians at MGE California. Our experienced team delivers expert auto repair in Hawthorne, South Bay, CA.">
+  <meta property="og:url" content="https://mgesouthbay.com/team.html">
+  <meta property="og:image" content="https://mgesouthbay.com/images/owner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Team | MGE California - ASE Certified Technicians">
+  <meta name="twitter:description" content="Meet the ASE certified and factory-trained technicians at MGE California. Our experienced team delivers expert auto repair in Hawthorne, South Bay, CA.">
+  <meta name="twitter:image" content="https://mgesouthbay.com/images/owner.jpg">
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -53,7 +65,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="hours">Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM</div>
-      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a></div>
+      <div>Call Us: <a href="tel:+13105468999">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link">Text Us</a></div>
     </div>
   </div>
 
@@ -61,11 +73,14 @@
   <header>
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.png" alt="MGE California Logo" class="logo-img">
+        </picture>
         <h1>MGE California<br><span>Premier Auto Service &amp; Repair</span></h1>
       </a>
       <nav id="nav">
-        <button class="nav-close" id="navClose" style="display:none">&times;</button>
+        <button class="nav-close" id="navClose" aria-label="Close navigation menu" style="display:none">&times;</button>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -78,7 +93,7 @@
           <li><a href="appointments.html" class="btn-appointment">Book Now</a></li>
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" aria-label="Open navigation menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -104,7 +119,10 @@
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <img class="avatar-photo" src="images/owner.jpg" alt="Owner - Shop Owner and Master Technician">
+          <picture>
+            <source srcset="images/owner.webp" type="image/webp">
+            <img class="avatar-photo" src="images/owner.jpg" alt="Owner - Shop Owner and Master Technician">
+          </picture>
           <div class="info">
             <h3>Owner</h3>
             <div class="role">Shop Owner &amp; Master Technician</div>
@@ -112,7 +130,10 @@
           </div>
         </div>
         <div class="team-card">
-          <img class="avatar-photo" src="images/lead_technician.jpg" alt="Lead Technician - ASE Certified Technician">
+          <picture>
+            <source srcset="images/lead_technician.webp" type="image/webp">
+            <img class="avatar-photo" src="images/lead_technician.jpg" alt="Lead Technician - ASE Certified Technician">
+          </picture>
           <div class="info">
             <h3>Lead Technician</h3>
             <div class="role">ASE Certified Technician</div>
@@ -120,7 +141,10 @@
           </div>
         </div>
         <div class="team-card">
-          <img class="avatar-photo" src="images/brakespecialist.jpg" alt="Brake Specialist - Brake and Suspension Expert">
+          <picture>
+            <source srcset="images/brakespecialist.webp" type="image/webp">
+            <img class="avatar-photo" src="images/brakespecialist.jpg" alt="Brake Specialist - Brake and Suspension Expert">
+          </picture>
           <div class="info">
             <h3>Brake Specialist</h3>
             <div class="role">Brake &amp; Suspension Expert</div>
@@ -128,7 +152,10 @@
           </div>
         </div>
         <div class="team-card">
-          <img class="avatar-photo" src="images/ac_electrical_tech.jpg" alt="A/C and Electrical Tech - Climate and Electrical Specialist">
+          <picture>
+            <source srcset="images/ac_electrical_tech.webp" type="image/webp">
+            <img class="avatar-photo" src="images/ac_electrical_tech.jpg" alt="A/C and Electrical Tech - Climate and Electrical Specialist">
+          </picture>
           <div class="info">
             <h3>A/C &amp; Electrical Tech</h3>
             <div class="role">Climate &amp; Electrical Specialist</div>
@@ -186,7 +213,10 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="images/logo.png" alt="MGE California">
+            <picture>
+              <source srcset="images/logo.webp" type="image/webp">
+              <img src="images/logo.png" alt="MGE California Logo">
+            </picture>
             <span>MGE California</span>
           </div>
           <p>Your trusted neighborhood auto repair shop in the South Bay. We provide expert service for all makes and models with a commitment to honesty, quality, and customer satisfaction.</p>
@@ -213,7 +243,7 @@
         <div class="footer-col">
           <h3>Contact</h3>
           <ul>
-            <li><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a></li>
+            <li><a href="tel:+13105468999" style="color: inherit;">(310) 546-8999</a> <a href="sms:+13105468999" class="sms-link" style="color: inherit;">Text Us</a></li>
             <li>SameDayAutoServices@gmail.com</li>
             <li>13900 Inglewood Ave, Hawthorne, CA 90250</li>
             <li>Mon-Fri: 8AM - 6PM</li>
@@ -230,6 +260,6 @@
 
   <script src="js/main.js"></script>
 
-  <a href="appointments.html" class="sticky-book-now">Book Now</a>
+  <a href="appointments.html" class="sticky-book-now" aria-label="Book an appointment">Book Now</a>
 </body>
 </html>
