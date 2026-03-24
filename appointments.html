@@ -66,6 +66,23 @@
     gtag('js', new Date());
     gtag('config', 'AW-18032292795');
   </script>
+  <!-- Event snippet for Submit lead form (2) conversion -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18032292795/nufMCKvn844cELvnu5ZD',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
 </head>
 <body>
 
@@ -524,6 +541,7 @@
       }
 
       if (response.ok && result.success === true) {
+        gtag_report_conversion();
         showSuccessMessage(formData.firstName);
       } else {
         showErrorWithFallback(result.message || 'Our online booking system is temporarily unavailable.', fallbackMailto);
